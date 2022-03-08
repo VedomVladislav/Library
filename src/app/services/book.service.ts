@@ -10,7 +10,7 @@ export class BookService {
 
   constructor(private http: HttpClient) { }
 
-  lisBooks(){
+  listBooks(){
     return this.http.get(this.baseUrl + 'library/books');
   }
 
