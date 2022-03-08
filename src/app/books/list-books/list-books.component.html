@@ -1,1 +1,14 @@
-<p>list-books works!</p>
+<h1 *ngIf="listBooks">Displaying {{ listBooks.length }} books</h1>
+<mat-list role="list">
+  <mat-card class="list-books" role="listitem" *ngFor="let book of listBooks">
+    <mat-card-title>{{ book.title }}</mat-card-title>
+
+    <mat-card-content>
+      <span class="bookid"> {{book.publishingHouse}} </span>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a class="action-link" [routerLink]="['/books/view', book.id]">View</a>  <a class="action-link" [routerLink]="['/books/edit', book.id]">Edit</a> |  <a class="action-link" [routerLink]="['/books/delete', book.id]">Delete</a>
+    </mat-card-actions>
+  </mat-card>
+</mat-list>

@@ -6,10 +6,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BookService {
 
+  baseUrl: string = 'http://10.92.92.22:8082/'
+
   constructor(private http: HttpClient) { }
 
-  lisBooks() {
+  lisBooks(){
+    return this.http.get(this.baseUrl + 'library/books');
+  }
 
+  viewBook(id: number) {
+    return this.http.get(this.baseUrl + 'library/books/' + id);
   }
 
 }

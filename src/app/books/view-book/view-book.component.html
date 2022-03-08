@@ -1,1 +1,4 @@
-<p>view-book works!</p>
+<mat-card class="book-details" *ngIf="bookDetails">
+  <mat-card-title>{{bookDetails.id}}</mat-card-title>
+  <mat-card-content>{{bookDetails.title}}</mat-card-content>
+</mat-card>

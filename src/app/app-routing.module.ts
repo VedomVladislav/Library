@@ -7,11 +7,14 @@ import { ListBooksComponent } from './books/list-books/list-books.component';
 import { ViewBookComponent } from './books/view-book/view-book.component';
 
 const routes: Routes = [
-  { path: 'create', component: AddBookComponent},
-  { path: 'view/:id', component: ViewBookComponent},
-  { path: 'list', component: ListBooksComponent},
-  { path: 'delete/:id', component: DeleteBookComponent},
-  { path: 'edit/:id', component: EditBookComponent}
+  { path: 'books', children:[
+      { path: '', component: ListBooksComponent},
+      { path: 'list', component: ListBooksComponent},
+      { path: 'delete/:id', component: DeleteBookComponent},
+      { path: 'edit/:id', component: EditBookComponent},
+      { path: 'view/:id', component: ViewBookComponent},
+      { path: 'create', component: AddBookComponent}
+    ]}
 ]
 
 @NgModule({
