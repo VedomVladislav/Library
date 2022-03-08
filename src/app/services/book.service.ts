@@ -6,11 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BookService {
 
-
   constructor(private http: HttpClient) { }
 
   lisBooks() {
-    
+
   }
 
 }
