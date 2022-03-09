@@ -5,7 +5,9 @@ import { ViewBookComponent } from './view-book/view-book.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
-
+import {MatListModule} from "@angular/material/list";
+import {RouterModule} from "@angular/router";
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -17,7 +19,10 @@ import { DeleteBookComponent } from './delete-book/delete-book.component';
     DeleteBookComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    MatListModule,
+    MatCardModule
   ]
 })
 export class BooksModule { }

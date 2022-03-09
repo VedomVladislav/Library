@@ -9,6 +9,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import { LayoutModule } from './layout/layout.module';
 import { BooksModule } from './books/books.module';
 import { HttpClientModule } from '@angular/common/http';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     LayoutModule,
     BooksModule,
     HttpClientModule,
+    MatListModule,
     BrowserAnimationsModule
   ],
   providers: [],

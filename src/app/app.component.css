@@ -4,7 +4,6 @@
     height: 100%;
   }
 
-  #sidebar {
-    max-width: 500px;
-  }
-  
+.main-content {
+  margin-left: 50px;
+}
